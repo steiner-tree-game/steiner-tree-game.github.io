@@ -54,7 +54,7 @@ function newGame(hashStr) {
             numTerminals = 12;
             break;
         case "honeycombS":
-            graph = new Honeycomb(11, 7, 50);
+            graph = new Honeycomb(11, 7, 45);
             numTerminals = 10;
             break;
         case "honeycombL":
@@ -331,6 +331,9 @@ function draw(timestamp) {
         p.y += p.vy * timeDiff / 16;
     });
     particles.filter((p) => p.currentEdge !== null && activeEdges.has(p.currentEdge));
+    ctx.fillStyle = "#FFFFFF";
+    ctx.font = `${15 * scale}px Arial`;
+    ctx.fillText('Connect all dots with the given number of lines!', 15 * scale, 505 * scale);
     if (!isNaN(cost)) {
         ctx.fillStyle = "#FFFFFF";
         ctx.font = `${30 * scale}px Arial`;
