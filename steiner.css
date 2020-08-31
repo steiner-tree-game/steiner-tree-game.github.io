@@ -10,6 +10,7 @@ canvas{
   padding: 10px;
 }
 #controls button {
-  margin: 5px;
+  margin: 2px;
   padding: 2px;
+  font-size: 11px;
 }
